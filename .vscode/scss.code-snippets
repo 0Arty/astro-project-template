@@ -1,0 +1,130 @@
+{
+	"media max width ": {
+		"prefix": "mmax",
+        "scope": "css,scss",
+		"body": [
+			"@media screen and (max-width: rem($1)) {",
+			"",
+			"}"
+		],
+		"description": "creating media frame with max-width property"
+	},
+	"media min width ": {
+		"prefix": "mmin",
+        "scope": "css,scss",
+		"body": [
+			"@media screen and (min-width: rem($1)) {",
+			"",
+			"}"
+		],
+		"description": "creating media frame with min-width property"
+	},
+    "media min height ": {
+		"prefix": "mminh",
+        "scope": "css,scss",
+		"body": [
+			"@media screen and (min-height: rem($1)) {",
+			"",
+			"}"
+		],
+		"description": "creating media frame with min-height property"
+	},
+    "media max height ": {
+		"prefix": "mmaxh",
+        "scope": "css,scss",
+		"body": [
+			"@media screen and (max-height: rem($1)) {",
+			"",
+			"}"
+		],
+		"description": "creating media frame with max-height property"
+	},
+    "hover = focus": {
+		"prefix": "hv",
+        "scope": "css,scss",
+		"body": [
+			"@include animation-on-hover{",
+			"   $1",
+			"}",
+		],
+		"description": "mixin for create equal animations for focus & hover"
+	},
+	"flex-direction": {
+		"prefix": "fdc",
+        "scope": "css,scss",
+		"body": [
+			"display: flex;",
+			"flex-direction: column;"
+		],
+		"description": "snippet for creating backdrop-fliter blur with good browser support"
+	},
+    "include wrapper": {
+        "prefix": "incw",
+        "scope": "css,scss",
+        "body": [
+            "@include wrapper(rem($1));"
+        ],
+        "description": "snipper for including wrapper mixin"
+    },
+    "include": {
+        "prefix": "inc",
+        "scope": "scss",
+        "body": [
+            "@include $1;"
+        ]
+    },
+    "rem": {
+        "prefix": "re",
+        "scope": "scss",
+        "body": [
+            "rem($1)"
+        ]
+    },
+    "var": {
+        "prefix": "var",
+        "scope": "css,scss",
+        "body": [
+            "var(--$1)"
+        ]
+    },
+    "margin-inline": {
+        "prefix": "mi",
+        "scope": "css,scss",
+        "body": [
+            "margin-inline: rem($1);"
+        ],
+        "description": "snipper for fast create margin-inline"
+    },
+    "add-mixins" : {
+        "prefix" : "use",
+        "scope": "scss, sass",
+        "body": "@use '../helpers' as *;",
+    },
+    "fill" : {
+        "prefix" : "fill",
+        "scope": "scss, sass",
+        "body": [
+            "[fill] {",
+            "    fill: currentColor",
+            "}"
+        ],
+    },
+    "stroke" : {
+        "prefix" : "stroke",
+        "scope": "scss, sass",
+        "body": [
+            "[stroke] {",
+            "    stroke: currentColor",
+            "}"
+        ],
+    },
+    "create mobile breakpoint" : {
+        "prefix" : "mob",
+        "scope": "scss, sass",
+        "body": [
+            "@include mobile{",
+            "   $1",
+            "}"
+        ],
+    }
+}

@@ -1,0 +1,24 @@
+---
+import EcoIcon from '../../assets/icons/eco.svg'
+import Image from '../../assets/images/empty.png'
+import SwiperSlide from './SwiperSlide.astro'
+
+const data = ['lorme', 'huy', 'loh', 'biba boba']
+---
+
+<div class='test'>
+   <img src={Image.src} alt='' />
+   <EcoIcon />
+
+   <div class='swiper Slider'>
+      <div class='swiper-wrapper'>
+         {data.map(slide => <SwiperSlide text={slide} />)}
+      </div>
+   </div>
+</div>
+
+<style>
+   .slider {
+      width: 100%;
+   }
+</style>

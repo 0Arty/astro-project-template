@@ -1,0 +1,65 @@
+{
+   "class": {
+      "prefix": "cla",
+      "scope": "html",
+      "body": ["class='$1'"],
+      "description": "class "
+   },
+   "swiper": {
+      "prefix": "swiper",
+      "scope": "astro",
+      "body": [
+         "<div class='swiper $1'>",
+         "    <div class='swiper-wrapper'>",
+         "        <div class='swiper-slide'>",
+         "            $2",
+         "        </div>",
+         "    </div>",
+         "</div>"
+      ],
+      "description": "create base structure for swiper slider"
+   },
+   "Insert test-text with additional tags": {
+      "prefix": "test-text-full",
+      "scope": "html",
+      "body": [
+         "<ol>",
+         "  <li> ol > li Test item 1</li>",
+         "  <li> ol > li Test item 2</li>",
+         "  <li> ol > li Test item 3</li>",
+         "</ol>",
+         "<ul>",
+         "  <li>ul > li Test item A</li>",
+         "  <li>ul > li  Test item B</li>",
+         "  <li>ul > li  Test item C</li>",
+         "</ul>",
+         "<p> p - Test paragraph text.</p>",
+         "<h1> h1 - Test </h1>",
+         "<h2> h2 - Test</h2>",
+         "<h3> h3 - Test </h3>",
+         "<h4> h4 - Test </h4>",
+         "<h5> h5 - Test </h5>",
+         "<h6> h6 - Test </h6>",
+         "<b> b - Bold </b>",
+         "<i> i - Italic </i>",
+         "<small> small - text</small>",
+         "<strong> strong - text</strong>",
+         "<mark> mark - text</mark>",
+         "<sub> sub - text</sub>",
+         "<sup> sub - text</sup>",
+         "<a href=\"#\"> a - Test link</a>",
+         "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit, ad ipsa atque debitis cupiditate aliquam tenetur asperiores porro alias quas? Ipsum explicabo ad rerum, recusandae quam vero repellat doloremque!</p>"
+      ],
+      "description": "Insert test text with popular tags and additional ones"
+   },
+   "picture": {
+      "prefix": "pic",
+      "scope": "html",
+      "body": [
+         "<picture class=''>",
+         "    <source srcset=\"assets/images/\" media=\"(max-width: 768px)\">",
+         "    <img src=\"assets/images/\" alt=\"\" class=''>",
+         "</picture>"
+      ]
+   }
+}
