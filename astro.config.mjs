@@ -16,9 +16,16 @@ export default defineConfig({
          rollupOptions: {
             output: {
                assetFileNames: assetInfo => {
-                  if (assetInfo && assetInfo.name && assetInfo.name.endsWith('.css')) {
-                     return 'styles/[name][extname]'
+                  if (assetInfo.names && assetInfo.names.length > 0) {
+                     for (const name of assetInfo.names) {
+                        if (name.endsWith('.css')) {
+                           console.log('this is css:', name)
+                           return 'styles/[name][extname]'
+                        }
+                        return 'assets/[name][extname]'
+                     }
                   }
+
                   return 'assets/[name][extname]'
                },
             },
