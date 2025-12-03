@@ -3,127 +3,117 @@
 *,
 ::before,
 ::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 :where(ul, ol):where([class]) {
-    padding-left: 0;
+   padding-left: 0;
 }
 
 :where(ul[class]) {
-    list-style: none;
+   list-style: none;
 }
 
 :where(address[class]) {
-    font-style: normal;
+   font-style: normal;
 }
 
-
-:where(h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul,
-    ol,
-    dl):where([class]) {
-    margin-block: 0;
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+   margin-block: 0;
 }
 
 html {
-    height: 100dvh;
+   height: 100dvh;
 }
 
 html,
 :has(:target) {
-    scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 html {
-    @media screen and (max-width: rem(768)) {
-        scroll-behavior: auto;
-    }
+   @media screen and (max-width: rem(768)) {
+      scroll-behavior: auto;
+   }
 }
 
-
-
 p {
-    margin-block: 0;
+   margin-block: 0;
 }
 
 p:where(:not([class]):not(:last-child)) {
-
-    // базовий відступ знизу для параграфу, який не має класу і не є останнім
-    //   margin-bottom: var(--paragraphMarginBottom);
+   // базовий відступ знизу для параграфу, який не має класу і не є останнім
+   //   margin-bottom: var(--paragraphMarginBottom);
 }
 
 img,
 video {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
+   display: block;
+   max-width: 100%;
+   height: auto;
+   max-height: 100%;
 }
 
 img {
-    object-fit: scale-down;
+   object-fit: scale-down;
 }
 
 input,
 textarea,
 select,
 button {
-    font: inherit;
-    border: none;
-    outline: none;
-    cursor: pointer;
+   border: none;
+   outline: none;
+   font: inherit;
+   cursor: pointer;
 }
 
 button {
-    background-color: transparent;
-    outline: none;
-    border: none;
+   border: none;
+   outline: none;
+   background-color: transparent;
 }
 
 button,
 label {
-    cursor: pointer;
+   cursor: pointer;
 }
 
-a{}
+a {
+}
 
 svg * {
-    transition-property: fill, stroke;
+   transition-property: fill, stroke;
 }
 
 button {
-    background-color: transparent;
-    outline: none;
-    border: none;
+   border: none;
+   outline: none;
+   background-color: transparent;
 }
-
 
 // відключаємо анімації, для людей які їх не бажають
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    ::before,
-    ::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+   *,
+   ::before,
+   ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+   }
 }
 
-body, html{
-    -webkit-overflow-scrolling: auto !important;
-    scroll-behavior: auto !important;
-    overscroll-behavior: none;
+body,
+html {
+   scroll-behavior: auto;
+
+   @media screen and (max-width: 768px) {
+      -webkit-overflow-scrolling: auto !important;
+      overscroll-behavior: none;
+   }
 }

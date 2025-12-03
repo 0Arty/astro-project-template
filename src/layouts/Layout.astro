@@ -1,0 +1,26 @@
+---
+import '../scss/main.scss'
+import LibsStyles from '@html/utils/LibsStyles.astro'
+import LibsScript from '@html/utils/LibsScript.astro'
+import Header from '@templates/Header.astro'
+import Footer from '@templates/Footer.astro'
+import Seo from '@html/utils/Seo.astro'
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <Seo title={title} />
+      <LibsStyles />
+   </head>
+   <body>
+      <Header />
+      <main>
+         <slot />
+      </main>
+      <Footer />
+      <LibsScript />
+   </body>
+</html>

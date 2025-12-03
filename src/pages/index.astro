@@ -1,8 +1,8 @@
 ---
-import Component from '../html/components/Component.astro'
-import Layout from '../html/layouts/Layout.astro'
+import Layout from '@layouts/Layout.astro'
+import { generateSeoTitle } from '../hooks/generateSeoTitle'
+
+const title = generateSeoTitle('Homepage')
 ---
 
-<Layout>
-   <Component />
-</Layout>
+<Layout title={title} />
