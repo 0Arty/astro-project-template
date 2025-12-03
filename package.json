@@ -7,7 +7,7 @@
       "build": "astro build",
       "preview": "astro preview",
       "astro": "astro",
-      "format:dist": "node format-dist.js",
+      "format:dist": "node scripts/format-dist.js",
       "serve": "npm run build && npm run format:dist"
    },
    "dependencies": {
