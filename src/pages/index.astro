@@ -2,7 +2,11 @@
 import Layout from '@layouts/Layout.astro'
 import { generateSeoTitle } from '../hooks/generateSeoTitle'
 
+import img from '@assets/images/empty.png'
+
 const title = generateSeoTitle('Homepage')
 ---
 
-<Layout title={title} />
+<Layout title={title}>
+   <img src={img.src} alt="" style="max-width: 250px; width: 100%; object-fit: cover;" />
+</Layout>

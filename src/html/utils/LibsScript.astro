@@ -1,30 +1,41 @@
+---
+interface Props {
+   libs?: string[]
+}
+
+const { libs = [] } = Astro.props
+
+const availableLibs = {
+   swiper: 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+   //    jquertyInputMask: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.j',
+   gsap: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js',
+   gsapScrollTrigger: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
+   //    gsapDrawSvgPlugin: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js',
+   //    gsapScrollSmoother: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js',
+   //    gsapSplitText: 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js',
+   //    jqueryValidate: 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js',
+   //    simpleBar: 'https://unpkg.com/simplebar@latest/dist/simplebar.min.js',
+}
+
+console.log()
+---
+
 <!-- jquery -->
 <script
    is:inline
    src="https://code.jquery.com/jquery-3.7.1.min.js"
    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
    crossorigin="anonymous"
-></script>
+>
+</script>
 
-<!-- Swiper JS -->
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{
+   Object.values(availableLibs).map(lib => {
+      return <script is:inline src={lib} />
+   })
+}
 
-<!-- JQuery InputMask -->
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
-
-<!-- gsap -->
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<!-- gsap plugins  DrawSvg, ScrollTrigger, SplitText -->
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-
-<!-- JQuery Validate -->
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-
-<!-- Simple Bar -->
-<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+{}
 
 <!-- main-js -->
 <script is:inline src="./js/index.js"></script>
