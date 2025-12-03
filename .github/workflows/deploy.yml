@@ -32,3 +32,5 @@ jobs:
               external_repository: 0Arty/test-ci-cd
               publish_dir: ./dist
               publish_branch: main
+              user_name: 'github-actions[bot]'
+              user_email: 'github-actions[bot]@users.noreply.github.com'
