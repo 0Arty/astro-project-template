@@ -36,7 +36,7 @@ Inside my Astro project, you'll see the following folders and files:
 
 All commands are run from the root of the project, from a terminal:
 | Command | Action |
-| :------------------------ | :----------------------------------------------- |
+| :--------------------- | :----------------------------------------------- |
 | `npm install` | Installs dependencies |
 | `npm run dev` | Starts local dev server at `localhost:4321` |
 | `npm run build` | Build your production site to `./dist/` |
@@ -46,14 +46,19 @@ All commands are run from the root of the project, from a terminal:
 
 ## Aliases
 
-```
-@components/   -   "./src/html/components/"
-@templates/    -   "./src/html/templates/"
-@ui/           -   "./src/html/ui/"
-@layouts/      -   "./src/layouts/"
-@html/         -   "./src/html/"
-@assets/       -   "./src/assets/"
-@icons/        -   "./src/assets/icons"
-@images/       -   "./src/assets/images"
-@public/       -   "./public/"
-```
+| Allias         | path                     |
+| :------------- | :----------------------- |
+| `@components/` | "./src/html/components/" |
+| `@components/` | "./src/html/components/" |
+| `@templates/`  | "./src/html/templates/"  |
+| `@ui/`         | "./src/html/ui/"         |
+| `@layouts/`    | "./src/layouts/"         |
+| `@html/`       | "./src/html/"            |
+| `@assets/`     | "./src/assets/"          |
+| `@icons/`      | "./src/assets/icons"     |
+| `@images/`     | "./src/assets/images"    |
+| `@public/ `    | "./public/"              |
+
+## CI/CD
+
+.github/workflows/deploy.yml
