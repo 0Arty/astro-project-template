@@ -61,4 +61,19 @@ All commands are run from the root of the project, from a terminal:
 
 ## CI/CD
 
-.github/workflows/deploy.yml
+1. Create personal token
+   [gitHub](https://github.com/settings/tokens)
+
+   scope - ✅ repo all
+
+2. Connect personal token
+   https://github.com/your-name/your-deploy-repository/settings/secrets/actions
+
+   click the button "new repository secret"
+   name - DEPLOY_TOKEN
+   value - your token, which was created in step 1
+
+3. .github/workflows/deploy.yml
+   change external_repository: your-username/your-deploy-repository
+
+4. git push
