@@ -7,14 +7,16 @@
       "build": "astro build",
       "preview": "astro preview",
       "astro": "astro",
-      "postbuild": "prettier --write \"dist/**/*.html\"",
-      "format:dist": "prettier --write \"dist/**/*.html\""
+      "format:dist": "node format-dist.js",
+      "serve": "npm run build && npm run format:dist"
    },
    "dependencies": {
       "astro": "^5.15.5"
    },
    "devDependencies": {
-      "prettier": "3.6.2",
+      "dotenv": "^17.2.3",
+      "gh-pages": "^6.3.0",
+      "prettier": "^3.6.2",
       "prettier-plugin-astro": "0.14.1",
       "sass": "^1.94.0"
    }

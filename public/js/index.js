@@ -211,7 +211,7 @@ APP.gsapConfig = () => {
 
 APP.createSlider = () => {
    let Slider = new Swiper('.Slider', {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 20,
    })
 }

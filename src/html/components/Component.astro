@@ -3,15 +3,20 @@ import EcoIcon from '../../assets/icons/eco.svg'
 import Image from '../../assets/images/empty.png'
 import SwiperSlide from './SwiperSlide.astro'
 
-const data = ['lorme', 'huy', 'loh', 'biba boba']
+const data = [
+   'testing data',
+   'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur laborum asperiores minus maxime sint rerum alias iure harum nisi quod. Optio error non perferendis exercitationem velit qui officiis dicta. Cupiditate?',
+   'asdadsads',
+   'andrii',
+]
 ---
 
-<div class='test'>
-   <img src={Image.src} alt='' />
+<div class="testing-component">
+   <img src={Image.src} alt="" />
    <EcoIcon />
 
-   <div class='swiper Slider'>
-      <div class='swiper-wrapper'>
+   <div class="swiper Slider">
+      <div class="swiper-wrapper">
          {data.map(slide => <SwiperSlide text={slide} />)}
       </div>
    </div>
