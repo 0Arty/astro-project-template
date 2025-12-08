@@ -10,8 +10,9 @@
          "@layouts/*": ["./src/layouts/*"],
          "@html/*": ["./src/html/*"],
          "@assets/*": ["./src/assets/*"],
-         "@icons/*": ["./src/assets/icons*"],
-         "@images/*": ["./src/assets/images*"],
+         "@icons/*": ["./src/assets/icons/*"],
+         "@images/*": ["./src/assets/images/*"],
+         "@config/*": ["./src/configs/*"],
          "@public/*": ["./public/*"]
       }
    }
