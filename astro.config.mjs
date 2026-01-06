@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config'
+import path from 'path'
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,7 +27,7 @@ export default defineConfig({
 
                   // CSS файли
                   if (fileName.endsWith('.css')) {
-                     return 'styles/[name][extname]'
+                     return '[name][extname]'
                   }
 
                   // Шрифти
@@ -63,6 +64,21 @@ export default defineConfig({
                   return 'assets/other/[name][extname]'
                },
             },
+         },
+      },
+      resolve: {
+         alias: {
+            '@components': path.resolve('./src/html/components'),
+            '@templates': path.resolve('./src/html/templates'),
+            '@ui': path.resolve('./src/html/ui'),
+            '@layouts': path.resolve('./src/layouts'),
+            '@html': path.resolve('./src/html'),
+            '@assets': path.resolve('./src/assets'),
+            '@icons': path.resolve('./src/assets/icons'),
+            '@images': path.resolve('./src/assets/images'),
+            '@configs': path.resolve('./src/configs'),
+            '@public': path.resolve('./public'),
+            '@public-assets': path.resolve('./public/assets'),
          },
       },
    },

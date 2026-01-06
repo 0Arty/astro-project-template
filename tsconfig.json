@@ -12,7 +12,7 @@
          "@assets/*": ["./src/assets/*"],
          "@icons/*": ["./src/assets/icons/*"],
          "@images/*": ["./src/assets/images/*"],
-         "@config/*": ["./src/configs/*"],
+         "@configs/*": ["./src/configs/*"],
          "@public/*": ["./public/*"]
       }
    }
