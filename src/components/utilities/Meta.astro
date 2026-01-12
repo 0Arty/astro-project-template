@@ -12,7 +12,7 @@ const { title } = Astro.props
 <meta property="og:type" content="website" />
 <meta property="og:title" content={META.title} />
 <meta property="og:description" content={META.desription} />
-<meta property="og:image" content="assets/meta/" />
+<meta property="og:image" content={META.imageSrc} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="" />
@@ -20,10 +20,10 @@ const { title } = Astro.props
 <!-- twitter -->
 <meta name="twitter:title" content={META.title} />
 <meta name="twitter:description" content={META.desription} />
-<meta name="twitter:image" content="assets/meta/" />
+<meta name="twitter:image" content={META.imageSrc} />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- favicon -->
-<link rel="icon" type="img/png" sizes="16x16" href="assets/meta/sm.png" />
-<link rel="icon" type="img/png" sizes="32x32" href="assets/meta/sm.png" />
-<link rel="icon" type="img/png" sizes="144x144" href="assets/meta/sm.png" />
+<link rel="icon" type={META.faviconType} sizes="16x16" href={META.faviconSrc} />
+<link rel="icon" type={META.faviconType} sizes="32x32" href={META.faviconSrc} />
+<link rel="icon" type={META.faviconType} sizes="144x144" href={META.faviconSrc} />

@@ -4,7 +4,7 @@ import '../scss/main.scss'
 // utils
 import LibsStyles from '@utilities/LibsStyles.astro'
 import LibsScript from '@utilities/LibsScript.astro'
-import Seo from '@utilities/Seo.astro'
+import Meta from '@utilities/Meta.astro'
 
 // layouts
 import Header from '@layouts/Header.astro'
@@ -17,7 +17,7 @@ const { title } = Astro.props
 <!doctype html>
 <html lang="en">
    <head>
-      <Seo title={title} />
+      <Meta title={title} />
       <LibsStyles />
    </head>
    <body>
