@@ -4,16 +4,20 @@
    "exclude": ["dist"],
    "compilerOptions": {
       "paths": {
-         "@components/*": ["./src/html/components/*"],
-         "@templates/*": ["./src/html/templates/*"],
-         "@ui/*": ["./src/html/ui/*"],
+         "@blocks/*": ["./src/components/blocks/*"],
+         "@ui/*": ["./src/components/ui/*"],
+         "@sections/*": ["./src/components/blocks/*"],
+         "@utilities/*": ["./src/components/utilities/*"],
+
          "@layouts/*": ["./src/layouts/*"],
-         "@html/*": ["./src/html/*"],
-         "@assets/*": ["./src/assets/*"],
-         "@icons/*": ["./src/assets/icons/*"],
-         "@images/*": ["./src/assets/images/*"],
-         "@configs/*": ["./src/configs/*"],
-         "@public/*": ["./public/*"]
+
+         "@functions/*": ["./src/configs/functions/*"],
+         "@data/*": ["./src/configs/data/*"],
+         "@consts/*": ["./src/configs/constants/*"],
+
+         "@public/*": ["./public/*"],
+         "@icons/*": ["./public/assets/icons/*"],
+         "@images/*": ["./public/assets/images/*"]
       }
    }
 }

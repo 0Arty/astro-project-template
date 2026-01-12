@@ -1,11 +1,16 @@
 ---
 import '../scss/main.scss'
-import LibsStyles from '@html/utils/LibsStyles.astro'
-import LibsScript from '@html/utils/LibsScript.astro'
-import Header from '@templates/Header.astro'
-import Footer from '@templates/Footer.astro'
-import Seo from '@html/utils/Seo.astro'
 
+// utils
+import LibsStyles from '@utilities/LibsStyles.astro'
+import LibsScript from '@utilities/LibsScript.astro'
+import Seo from '@utilities/Seo.astro'
+
+// layouts
+import Header from '@layouts/Header.astro'
+import Footer from '@layouts/Footer.astro'
+
+// props
 const { title } = Astro.props
 ---
 

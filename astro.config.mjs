@@ -68,17 +68,20 @@ export default defineConfig({
       },
       resolve: {
          alias: {
-            '@components': path.resolve('./src/html/components'),
-            '@templates': path.resolve('./src/html/templates'),
-            '@ui': path.resolve('./src/html/ui'),
+            '@blocks': path.resolve('./src/components/blocks'),
+            '@ui': path.resolve('./src/components/ui'),
+            '@sections': path.resolve('./src/components/sections'),
+            '@utilities': path.resolve('./src/components/utilities'),
+
             '@layouts': path.resolve('./src/layouts'),
-            '@html': path.resolve('./src/html'),
-            '@assets': path.resolve('./src/assets'),
-            '@icons': path.resolve('./src/assets/icons'),
-            '@images': path.resolve('./src/assets/images'),
-            '@configs': path.resolve('./src/configs'),
+
+            '@functions': path.resolve('./src/configs/functions'),
+            '@consts': path.resolve('./src/configs/constants'),
+            '@data': path.resolve('./src/configs/data'),
+
             '@public': path.resolve('./public'),
-            '@public-assets': path.resolve('./public/assets'),
+            '@icons': path.resolve('./public/assets/icons'),
+            '@images': path.resolve('./public/assets/images'),
          },
       },
    },
