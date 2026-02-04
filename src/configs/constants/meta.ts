@@ -9,7 +9,7 @@ interface IMETA {
 export const META: IMETA = {
    desription: 'Site description',
    title: 'og title, twitter title',
-   imageSrc: '/assets/images/meta/meta.png',
-   faviconSrc: '/assets/images/meta/favicon.ico',
-   faviconType: 'img/ico',
+   imageSrc: './assets/images/meta/og-image.png',
+   faviconSrc: './assets/images/meta/favicon.svg',
+   faviconType: 'img/svg+xml',
 }
