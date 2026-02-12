@@ -1,0 +1,18 @@
+.swiper {
+   width: 100%;
+
+   .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+   }
+}
+
+.swiper-pagination-bullet {
+   margin: 0;
+   padding: 0;
+   border-radius: 0;
+   opacity: 1;
+   &-active {
+   }
+}
