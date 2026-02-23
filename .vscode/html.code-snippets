@@ -1,9 +1,9 @@
 {
    "class": {
       "prefix": "cla",
-      "scope": "html",
+      "scope": "html, astro",
       "body": ["class='$1'"],
-      "description": "class "
+      "description": "class ",
    },
    "swiper": {
       "prefix": "swiper",
@@ -15,9 +15,9 @@
          "            $2",
          "        </div>",
          "    </div>",
-         "</div>"
+         "</div>",
       ],
-      "description": "create base structure for swiper slider"
+      "description": "create base structure for swiper slider",
    },
    "Insert test-text with additional tags": {
       "prefix": "test-text-full",
@@ -48,18 +48,18 @@
          "<sub> sub - text</sub>",
          "<sup> sub - text</sup>",
          "<a href=\"#\"> a - Test link</a>",
-         "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit, ad ipsa atque debitis cupiditate aliquam tenetur asperiores porro alias quas? Ipsum explicabo ad rerum, recusandae quam vero repellat doloremque!</p>"
+         "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit, ad ipsa atque debitis cupiditate aliquam tenetur asperiores porro alias quas? Ipsum explicabo ad rerum, recusandae quam vero repellat doloremque!</p>",
       ],
-      "description": "Insert test text with popular tags and additional ones"
+      "description": "Insert test text with popular tags and additional ones",
    },
    "picture": {
       "prefix": "pic",
-      "scope": "html",
+      "scope": "html,astro",
       "body": [
          "<picture class=''>",
          "    <source srcset=\"assets/images/\" media=\"(max-width: 768px)\">",
          "    <img src=\"assets/images/\" alt=\"\" class=''>",
-         "</picture>"
-      ]
-   }
+         "</picture>",
+      ],
+   },
 }

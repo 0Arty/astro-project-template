@@ -74,7 +74,7 @@
       "scope": "javascript",
       "body": [
          "const INTERACTIVE_ELEMENTS = '$1'",
-         "$document.click(function (e) {",
+         "$(document).click(function (e) {",
          "    if (!$(e.target).closest(INTERACTIVE_ELEMENTS ).length) {",
          "        $2",
          "    }",

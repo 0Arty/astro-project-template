@@ -3,8 +3,14 @@ import { defineConfig } from 'astro/config'
 import path from 'path'
 
 // https://astro.build/config
+
+const isProd = process.env.NODE_ENV === 'production'
+const base = isProd ? '/ws-mira-meat/' : ''
+
 export default defineConfig({
    compressHTML: false,
+   site: 'https://0arty.github.io',
+   base,
    build: {
       assets: 'assets',
       inlineStylesheets: 'never',
@@ -28,6 +34,10 @@ export default defineConfig({
                   // CSS файли
                   if (fileName.endsWith('.css')) {
                      return '[name][extname]'
+                  }
+                  // JOSN
+                  if (fileName.endsWith('.json')) {
+                     return 'assets/js/[name][extname]'
                   }
 
                   // Шрифти
@@ -82,6 +92,8 @@ export default defineConfig({
             '@public': path.resolve('./public'),
             '@icons': path.resolve('./public/assets/icons'),
             '@images': path.resolve('./public/assets/images'),
+            '@videos': path.resolve('./public/assets/videos'),
+            '@fonts': path.resolve('./public/assets/fonts'),
          },
       },
    },

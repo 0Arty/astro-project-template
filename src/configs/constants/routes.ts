@@ -1,7 +1,17 @@
 import { createAnchor, createExampleLink } from '@functions/router'
 
+const BASE = import.meta.env.BASE_URL
+
 export const ROUTES = {
-   findLocation: createExampleLink('findLocation'),
+   INDEX: BASE,
+   PRODUCTS: `${BASE}products`,
+   PRODUCT: `${BASE}product`,
+   PRODUCTIONS: `${BASE}productions`,
+   ABOUT: `${BASE}about`,
+   STORES: `${BASE}stores`,
+   NEWS: `${BASE}news`,
+   POST: `${BASE}post`,
+   CONTACTS: `${BASE}contacts`,
 } as const
 
 export const ANCHORS = {
@@ -14,46 +24,27 @@ export const ANCHORS = {
 
 export const MENU = [
    {
-      link: createAnchor(ANCHORS.AboutUs),
-      name: 'About us',
+      link: ROUTES.PRODUCTS,
+      name: 'Наша продукція',
    },
    {
-      link: createAnchor(ANCHORS.OurLocations),
-      name: 'Our locations',
-   },
-
-   {
-      link: createAnchor(ANCHORS.Services),
-      name: 'Services',
-   },
-
-   {
-      link: createAnchor(ANCHORS.Results),
-      name: 'Results',
-   },
-] as const
-
-export const OFFICES = [
-   {
-      link: createExampleLink('Baltimore'),
-      name: 'Baltimore',
-      id: 'Baltimore1',
+      link: ROUTES.PRODUCTIONS,
+      name: 'Виробництво',
    },
    {
-      link: createExampleLink('Towson'),
-      name: 'Towson',
-      id: 'Towson1',
+      link: ROUTES.ABOUT,
+      name: 'Про компанію',
    },
-
    {
-      link: createExampleLink('Essex'),
-      name: 'Essex',
-      id: 'Essex1',
+      link: ROUTES.STORES,
+      name: 'Магазини',
    },
-
    {
-      link: createExampleLink('Hyattsville'),
-      name: 'Hyattsville',
-      id: 'Hyattsville1',
+      link: ROUTES.NEWS,
+      name: 'Новини & рецепти',
+   },
+   {
+      link: ROUTES.CONTACTS,
+      name: 'Контакти',
    },
 ] as const

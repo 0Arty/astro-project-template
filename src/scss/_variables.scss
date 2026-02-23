@@ -3,11 +3,32 @@
 :root {
    // base variables
    --transition-duration: 0.4s;
-   --base-color: black;
-   --base-font-family: 'Inter';
+   --base-color: var(--black);
+   --base-font-family: var(--font-geist);
    --base-font-size: rem(16);
 
    // layers
    --layer-top-header: 1000;
    --layer-top: 950;
+
+   // fonts
+   --font-geist-mono: 'Geist Mono', monospace;
+   --font-geist: 'Geist', sans-serif;
+   --font-jeko: 'JekoBold', sans-serif;
+
+   // colors
+
+   --white: white;
+   --white-64: rgba(255, 255, 255, 0.64);
+   --white-50: rgba(255, 255, 255, 0.5);
+   --white-32: rgba(255, 255, 255, 0.32);
+   --white-12: rgba(255, 255, 255, 0.12);
+
+   --black: #170000;
+   --black-50: rgba(23, 0, 0, 0.5);
+   --black-32: rgba(23, 0, 0, 0.32);
+   --black-12: rgba(23, 0, 0, 0.12);
+
+   --red: #e3000f;
+   --red-active: #ba000c;
 }

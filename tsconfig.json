@@ -17,7 +17,9 @@
 
          "@public/*": ["./public/*"],
          "@icons/*": ["./public/assets/icons/*"],
-         "@images/*": ["./public/assets/images/*"]
+         "@images/*": ["./public/assets/images/*"],
+         "@videos/*": ["./public/assets/videos/*"],
+         "@fonts/*": ["./public/assets/fonts/*"]
       }
    }
 }
