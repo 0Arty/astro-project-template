@@ -34,7 +34,7 @@ export default defineConfig({
                   if (fileName.endsWith('.css')) {
                      return '[name][extname]'
                   }
-                  // JOSN
+                  // JSON
                   if (fileName.endsWith('.json')) {
                      return 'assets/js/[name][extname]'
                   }

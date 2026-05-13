@@ -16,5 +16,16 @@
    },
    "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.git/objects/**": true,
+      "**/dist/**": true
+   },
+
+   "js/ts.tsserver.watchOptions": {
+      "watchFile": "useFsEvents",
+      "watchDirectory": "useFsEvents",
+      "fallbackPolling": "dynamicPriorityPolling"
    }
 }
