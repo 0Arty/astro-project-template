@@ -2,12 +2,14 @@
 @use './media' as *;
 
 @mixin wrapper($width: rem(1680)) {
-    $padding : rem(40);
-    $padding-mobile : rem(20);
+    $padding: rem(40);
+    $padding-mobile: rem(20);
+
     width: 100%;
     max-width: $width;
     margin-inline: auto;
-    $breakpoint : calc($width + $padding + $padding);
+
+    $breakpoint: calc($width + $padding + $padding);
 
     @media screen and (max-width: $breakpoint) {
         width: calc(100% - ($padding * 2));

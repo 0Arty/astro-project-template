@@ -1,8 +1,9 @@
 @use '../helpers' as *;
 
 .header{
-    width: 100%;
     position: sticky;
     top: 0;
     z-index: var(--layer-top-header);
+    display: flex;
+    width: 100%;
 }

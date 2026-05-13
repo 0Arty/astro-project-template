@@ -19,16 +19,14 @@
    // colors
 
    --white: white;
-   --white-64: rgba(255, 255, 255, 0.64);
-   --white-50: rgba(255, 255, 255, 0.5);
-   --white-32: rgba(255, 255, 255, 0.32);
-   --white-12: rgba(255, 255, 255, 0.12);
-
+   --white-64: rgb(255 255 255 / 64%);
+   --white-50: rgb(255 255 255 / 50%);
+   --white-32: rgb(255 255 255 / 32%);
+   --white-12: rgb(255 255 255 / 12%);
    --black: #170000;
-   --black-50: rgba(23, 0, 0, 0.5);
-   --black-32: rgba(23, 0, 0, 0.32);
-   --black-12: rgba(23, 0, 0, 0.12);
-
+   --black-50: rgb(23 0 0 / 50%);
+   --black-32: rgb(23 0 0 / 32%);
+   --black-12: rgb(23 0 0 / 12%);
    --red: #e3000f;
    --red-active: #ba000c;
 }

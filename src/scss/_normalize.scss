@@ -3,8 +3,6 @@
 *,
 ::before,
 ::after {
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -36,7 +34,7 @@ html,
 }
 
 html {
-   @media screen and (max-width: rem(768)) {
+   @media screen and (width <= rem(768)) {
       scroll-behavior: auto;
    }
 }
@@ -45,7 +43,7 @@ p {
    margin-block: 0;
 }
 
-p:where(:not([class]):not(:last-child)) {
+p:where(:not([class], :last-child)) {
    // базовий відступ знизу для параграфу, який не має класу і не є останнім
    //   margin-bottom: var(--paragraphMarginBottom);
 }
@@ -83,8 +81,6 @@ label {
    cursor: pointer;
 }
 
-a {
-}
 
 svg * {
    transition-property: fill, stroke;
@@ -112,7 +108,7 @@ body,
 html {
    scroll-behavior: auto;
 
-   @media screen and (max-width: 768px) {
+   @media screen and (width <= 768px) {
       -webkit-overflow-scrolling: auto !important;
       overscroll-behavior: none;
    }
