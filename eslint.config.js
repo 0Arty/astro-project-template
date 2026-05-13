@@ -1,6 +1,7 @@
 import js from '@eslint/js'
 import astro from 'eslint-plugin-astro'
 import tsParser from '@typescript-eslint/parser'
+import globals from 'globals'
 
 export default [
    js.configs.recommended,
@@ -13,12 +14,10 @@ export default [
 
    // Node.js файли (конфіги, скрипти)
    {
-      files: ['astro.config.mjs', 'scripts/**/*.js', 'eslint.config.js'],
+      files: ['astro.config.mjs', 'astro-assets-types.mjs', 'scripts/**/*.js', 'eslint.config.js'],
       languageOptions: {
          globals: {
-            process: 'readonly',
-            console: 'readonly',
-            __dirname: 'readonly',
+            ...globals.node,
          },
       },
    },
