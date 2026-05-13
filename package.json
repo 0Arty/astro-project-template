@@ -11,7 +11,7 @@
       "serve": "npm run build && npm run format:dist",
       "lint": "eslint .",
       "lint:fix": "eslint . --fix",
-      "lint:css": "stylelint 'src/**/*.scss'",
+      "lint:css": "stylelint 'src/scss/*.scss'",
       "lint:css:fix": "stylelint 'src/**/*.scss' --fix"
    },
    "dependencies": {
