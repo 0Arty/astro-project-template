@@ -3,7 +3,13 @@ const fonts = {
    font1: 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Onest:wght@100..900&display=swap',
    font2: 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Onest:wght@100..900&display=swap',
 }
+
+const base = import.meta.env.BASE_URL
 ---
+
+<script define:vars={{ base }}>
+   window.__BASE__ = base.endsWith('/') ? base.slice(0, -1) : base
+</script>
 
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />

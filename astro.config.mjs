@@ -4,8 +4,7 @@ import path from 'path'
 
 // https://astro.build/config
 
-const isProd = process.env.NODE_ENV === 'production'
-const base = isProd ? '/ws-mira-meat/' : ''
+const base = process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : ''
 
 export default defineConfig({
    compressHTML: false,

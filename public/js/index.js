@@ -169,6 +169,12 @@ APP.utils = {
          resizeObserver.observe(header)
       }
    },
+
+   url: path => {
+      const BASE = window.__BASE__ || ''
+
+      return `${BASE}${path}`
+   },
 }
 
 APP.gsapConfig = () => {
@@ -180,11 +186,29 @@ APP.gsapConfig = () => {
       ignoreMobileResize: true,
    })
 }
+
+APP.testFetch = async () => {
+   try {
+      const response = await fetch(APP.utils.url('/js/shops.json'))
+
+      if (!response.ok) {
+         throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const jsonData = await response.json()
+      console.log('jsonData:', jsonData.message.text)
+   } catch (error) {
+      console.error('Помилка завантаження даних:', error)
+   }
+}
+
 document.addEventListener('DOMContentLoaded', event => {
    APP.gsapConfig()
    //    APP.utils.inputMasks()
    APP.utils.scrollToAnchor()
    APP.utils.setHeaderHeight()
+
+   APP.testFetch()
 
    ScrollTrigger.refresh()
 })
