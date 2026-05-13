@@ -1,4 +1,4 @@
-let APP = {}
+const APP = {}
 // APP UTILS =======================================================================
 APP.utils = {
    debounce: (func, delay) => {
@@ -136,10 +136,8 @@ APP.utils = {
       window.addEventListener('resize', update)
 
       // resize самого header (sticky, меню, шрифти, etc)
-      let resizeObserver = null
       if ('ResizeObserver' in window) {
-         resizeObserver = new ResizeObserver(update)
-         resizeObserver.observe(header)
+         new ResizeObserver(update).observe(header)
       }
    },
 
@@ -156,7 +154,7 @@ APP.utils = {
       const BASE = window.__BASE__ || ''
 
       try {
-         const response = await fetch(`${BASE}/js/${path}`)
+         const response = await fetch(`${BASE}/js/mocks/${path}`)
 
          if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`)
@@ -181,9 +179,10 @@ APP.gsapConfig = () => {
 
 APP.fetchData = async () => {
    const data = await APP.utils.fetchData('details.json')
+   console.log('data:', data)
 }
 
-document.addEventListener('DOMContentLoaded', event => {
+document.addEventListener('DOMContentLoaded', () => {
    APP.gsapConfig()
    //    APP.utils.inputMasks()
    APP.utils.scrollToAnchor()
