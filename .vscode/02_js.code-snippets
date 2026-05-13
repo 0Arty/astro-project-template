@@ -1,0 +1,39 @@
+{
+   "Debug console log": {
+      "prefix": "clg",
+      "scope": "javascript",
+      "body": "console.log('$1:', $1)",
+      "description": "console log",
+   },
+   "Debounce": {
+      "prefix": "debounce",
+      "scope": "javascript",
+      "body": [
+         "const handleResize = APP.utils.debounce(() => {",
+         "",
+         "}, 300);",
+         "",
+         "window.addEventListener('resize', handleResize);",
+      ],
+      "description": "function debounce for resize window",
+   },
+
+   "closest-elemnets": {
+      "prefix": "closest",
+      "scope": "javascript",
+      "body": [
+         "const INTERACTIVE_ELEMENTS = '$1'",
+         "$(document).click(function (e) {",
+         "    if (!$(e.target).closest(INTERACTIVE_ELEMENTS ).length) {",
+         "        $2",
+         "    }",
+         "})",
+      ],
+   },
+   "fetch": {
+      "prefix": "fetch",
+      "scope": "javascript",
+      "description": "basic path is public/js/*",
+      "body": [" const data = await APP.utils.fetchData('$1.json')"],
+   },
+}

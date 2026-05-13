@@ -22,34 +22,7 @@ APP.utils = {
          }
       }
    },
-   onWidthChange: (callback, debounceMs = 150) => {
-      let lastWidth = window.innerWidth
-      let timeoutId = null
 
-      function handleResize() {
-         if (timeoutId) {
-            clearTimeout(timeoutId)
-         }
-
-         timeoutId = setTimeout(() => {
-            const currentWidth = window.innerWidth
-
-            if (currentWidth !== lastWidth) {
-               lastWidth = currentWidth
-               callback(currentWidth)
-            }
-         }, debounceMs)
-      }
-
-      window.addEventListener('resize', handleResize)
-
-      return () => {
-         if (timeoutId) {
-            clearTimeout(timeoutId)
-         }
-         window.removeEventListener('resize', handleResize)
-      }
-   },
    inputMasks: () => {
       $('input[data-input-type]').each(function () {
          const inputType = $(this).data('input-type')
@@ -170,10 +143,29 @@ APP.utils = {
       }
    },
 
-   url: path => {
+   fetchData: async path => {
+      // це налаштування для CI/CD для guthub pages
+      // Щоб автоматтично підхватувало base path для запиту, і не доводилось кожен раз вручну змінювати шлях
+
+      // ще в head є скрипт, в проді він нічого не робить, тому його варто прибрати
+      //   він треба виключно для розробки
+      //<script define:vars={{ base }}>
+      //    window.__BASE__ = base.endsWith('/') ? base.slice(0, -1) : base
+      // </script>
+
       const BASE = window.__BASE__ || ''
 
-      return `${BASE}${path}`
+      try {
+         const response = await fetch(`${BASE}/js/${path}`)
+
+         if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+         }
+
+         return await response.json()
+      } catch (error) {
+         console.error('Помилка завантаження даних:', error)
+      }
    },
 }
 
@@ -187,19 +179,8 @@ APP.gsapConfig = () => {
    })
 }
 
-APP.testFetch = async () => {
-   try {
-      const response = await fetch(APP.utils.url('/js/shops.json'))
-
-      if (!response.ok) {
-         throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      const jsonData = await response.json()
-      console.log('jsonData:', jsonData.message.text)
-   } catch (error) {
-      console.error('Помилка завантаження даних:', error)
-   }
+APP.fetchData = async () => {
+   const data = await APP.utils.fetchData('details.json')
 }
 
 document.addEventListener('DOMContentLoaded', event => {
@@ -208,7 +189,7 @@ document.addEventListener('DOMContentLoaded', event => {
    APP.utils.scrollToAnchor()
    APP.utils.setHeaderHeight()
 
-   APP.testFetch()
+   APP.fetchData()
 
    ScrollTrigger.refresh()
 })

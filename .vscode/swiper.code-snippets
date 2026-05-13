@@ -1,22 +1,4 @@
 {
-   "Debug console log": {
-      "prefix": "clg",
-      "scope": "javascript",
-      "body": "console.log('$1:', $1)",
-      "description": "console log",
-   },
-   "Debounce": {
-      "prefix": "debounce",
-      "scope": "javascript",
-      "body": [
-         "const handleResize = APP.utils.debounce(() => {",
-         "",
-         "}, 300);",
-         "",
-         "window.addEventListener('resize', handleResize);",
-      ],
-      "description": "function debounce for resize window",
-   },
    "swiper": {
       "prefix": "swiper-class",
       "scope": "javascript",
@@ -68,17 +50,5 @@
       "prefix": "swiper-offset",
       "scope": "javascript",
       "body": ["slidesOffsetBefore: 0,", "slidesOffsetAfter: 0,"],
-   },
-   "closest-elemnets": {
-      "prefix": "closest",
-      "scope": "javascript",
-      "body": [
-         "const INTERACTIVE_ELEMENTS = '$1'",
-         "$(document).click(function (e) {",
-         "    if (!$(e.target).closest(INTERACTIVE_ELEMENTS ).length) {",
-         "        $2",
-         "    }",
-         "})",
-      ],
    },
 }
