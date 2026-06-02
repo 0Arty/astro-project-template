@@ -12,7 +12,7 @@
       "editor.defaultFormatter": "astro-build.astro-vscode"
    },
    "[scss]": {
-      "editor.defaultFormatter": "stylelint.vscode-stylelint"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
    },
    "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -22,7 +22,6 @@
       "**/.git/objects/**": true,
       "**/dist/**": true
    },
-
    "js/ts.tsserver.watchOptions": {
       "watchFile": "useFsEvents",
       "watchDirectory": "useFsEvents",
